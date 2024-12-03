@@ -13,3 +13,20 @@ export async function fetchImages(query, page = 1, perPage = 12) {
 
   return response.json();
 }
+// // fetchImages(query, page);
+// then(({ hits, totalHits }) => {
+//   toggleLoader(false);
+//   if (hits.length === 0) {
+//     iziToast.error({
+//       title: 'Error',
+//       message: 'No images found. Please try again!',
+//     });
+//     return;
+//   }
+
+//   gallery.insertAdjacentHTML('beforeend', renderGallery(hits));
+//   lightbox.refresh();
+// }).catch(error => {
+//   toggleLoader(false);
+//   iziToast.error({ title: 'Error', message: 'Failed to fetch images.' });
+// });

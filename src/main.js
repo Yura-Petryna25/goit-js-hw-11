@@ -42,7 +42,15 @@ async function handleSearch(event) {
       lightbox.refresh();
     }
   } catch (error) {
-    iziToast.error({ title: 'Error', message: 'Something went wrong!' });
+    toggleLoader(false);
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to fetch images. Please try again later.',
+    });
   }
 }
+// catch (error) {
+//   iziToast.error({ title: 'Error', message: 'Something went wrong!' });
+// }
+
 form.addEventListener('submit', handleSearch);
